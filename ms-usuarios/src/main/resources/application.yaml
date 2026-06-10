@@ -1,3 +1,42 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: ms-usuarios
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/CF_usuarios
+    username: postgres
+    password: 0502
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: America/Sao_Paulo
+
+jwt:
+  secret: minha-chave-secreta-super-segura-financeiro-2026
+  expiration: 86400000
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    root: INFO
+    br.com.controlefinanceiro: DEBUG
+
+
