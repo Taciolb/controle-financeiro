@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6010007-05c2-4fe2-95ac-052a25686529" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/exception/EmailJaCadastradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explicação_projeto.docx" beforeDir="false" afterPath="$PROJECT_DIR$/explicação_projeto.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/entity/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$plicação_projeto.docx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/repository/UsuarioRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
