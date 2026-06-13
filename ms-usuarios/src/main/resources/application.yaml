@@ -6,9 +6,9 @@ spring:
     name: ms-usuarios
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/CF_usuarios
-    username: postgres
-    password: 0502
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/CF_usuarios}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -25,8 +25,8 @@ spring:
     time-zone: America/Sao_Paulo
 
 jwt:
-  secret: minha-chave-secreta-super-segura-financeiro-2026
-  expiration: 86400000
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION:86400000}
 
 springdoc:
   api-docs:

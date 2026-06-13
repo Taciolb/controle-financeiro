@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6010007-05c2-4fe2-95ac-052a25686529" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/exception/UsuarioNaoEncontradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRO~1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms-usuarios/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-usuarios/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$NTRO~1.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,17 +46,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/ms-usuarios",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/tacio/Desktop/TLB TECH/Controle Financeiro",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MsUsuariosApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/ms-usuarios&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tacio/Desktop/TLB TECH/Controle Financeiro&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="MsUsuariosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.controlefinanceiro.msusuarios.MsUsuariosApplication" />
+      <module name="ms-usuarios" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.controlefinanceiro.msusuarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MsUsuariosApplication" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d6010007-05c2-4fe2-95ac-052a25686529" name="Changes" comment="" />

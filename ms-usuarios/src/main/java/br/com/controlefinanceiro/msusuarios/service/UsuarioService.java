@@ -9,6 +9,7 @@ import br.com.controlefinanceiro.msusuarios.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
@@ -20,9 +21,10 @@ public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
 
+    @Transactional
     public UsuarioResponseDTO criar(UsuarioRequestDTO dto) {
         if (usuarioRepository.existsByEmail(dto.email())) {
-            throw new EmailJaCadastradoException("E-mail já está em uso");
+            throw new EmailJaCadastradoException("E-mail já está em uso: " + dto.email());
         }
 
         Usuario usuario = Usuario.builder()
@@ -35,7 +37,7 @@ public class UsuarioService {
     }
 
     public UsuarioResponseDTO buscarPorId(UUID id) {
-        return toResponse(usuarioRepository.findById(id)
+        return toResponse(usuarioRepository.findByIdAndAtivoTrue(id)
                 .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuário não encontrado: " + id)));
     }
 
@@ -46,13 +48,14 @@ public class UsuarioService {
                 .toList();
     }
 
+    @Transactional
     public UsuarioResponseDTO atualizar(UUID id, UsuarioRequestDTO dto) {
-        Usuario usuario = usuarioRepository.findById(id)
-                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuário não encontrado"));
+        Usuario usuario = usuarioRepository.findByIdAndAtivoTrue(id)
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuário não encontrado: " + id));
 
         if (!usuario.getEmail().equals(dto.email()) &&
                 usuarioRepository.existsByEmail(dto.email())) {
-            throw new EmailJaCadastradoException("E-mail já em uso");
+            throw new EmailJaCadastradoException("E-mail já está em uso: " + dto.email());
         }
 
         usuario.setNome(dto.nome());
@@ -62,9 +65,10 @@ public class UsuarioService {
         return toResponse(usuarioRepository.save(usuario));
     }
 
+    @Transactional
     public void desativar(UUID id) {
-        Usuario usuario = usuarioRepository.findById(id)
-                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuário não encontrado"));
+        Usuario usuario = usuarioRepository.findByIdAndAtivoTrue(id)
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuário não encontrado: " + id));
 
         usuario.setAtivo(false);
         usuarioRepository.save(usuario);
