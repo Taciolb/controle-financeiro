@@ -8,5 +8,5 @@ public record UsuarioResponseDTO(
         String nome,
         String email,
         Boolean ativo,
-        LocalDateTime criandoEm
+        LocalDateTime criadoEm
 ) {}
