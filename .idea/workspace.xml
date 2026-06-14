@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d6010007-05c2-4fe2-95ac-052a25686529" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/ms-usuarios/src/main/java/br/com/controlefinanceiro/msusuarios/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
