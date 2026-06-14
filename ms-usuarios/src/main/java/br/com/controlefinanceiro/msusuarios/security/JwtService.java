@@ -3,6 +3,7 @@ package br.com.controlefinanceiro.msusuarios.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +20,19 @@ public class JwtService {
     @Value("${jwt.expiration}")
     private Long expiration;
 
+    private SecretKey chave;
+
+    @PostConstruct
+    public void init() {
+        this.chave = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+    }
+
     public String gerarToken(String email) {
         return Jwts.builder()
                 .subject(email)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + expiration))
-                .signWith(getChave())
+                .signWith(chave)
                 .compact();
     }
 
@@ -42,13 +50,11 @@ public class JwtService {
 
     private Claims getClaims(String token) {
         return Jwts.parser()
-                .verifyWith(getChave())
+                .verifyWith(chave)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();
     }
 
-    private SecretKey getChave() {
-        return Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
-    }
+
 }
